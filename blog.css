@@ -1,0 +1,225 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+list-style: none;
+margin: 40px 0 5px;
+padding: 25px 0 5px;
+text-align:center;
+margin-top: -24px;
+
+background-color:#8B008B;
+border: 5px solid;
+border-style:  dashed;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color:white;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #feb386;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+
+
+
+.main-header{
+  
+}
+.content{
+    text-align: left;
+    margin-top: -10px;
+}
+.blog{
+    text-align: center;
+}
+
+ h4{
+    font-family: 'Monsserat', cursive;
+    background-color:#8B6969; 
+}
+
+
+
+.flip_effect_horizontal {
+/* общие стили */
+width:240px; /* ширина блока с flip */
+height:240px; /* высота блока с flip */
+position: relative; /* позиционируем для дочерних блоков */
+ 
+transition:1s; /* скорость поворота */
+transform-style: preserve-3d; /* стиль трансформирования 3-д */
+ 
+/* для поддержки webkit */
+-webkit-transition:1s;
+-webkit-transform-style: preserve-3d;
+-webkit-transform: rotateY(0deg);
+ 
+/* для поддержки moz */
+-moz-transition:1s;
+-moz-transform-style: preserve-3d;
+-moz-transform: rotateY(0deg);
+ 
+}
+ 
+.flip_effect_horizontal:hover {
+/* общие стили */
+transform: rotateY(180deg); /* поворачиваем на 180 градусов по горизонтали */
+/* для поддержки webkit */
+-webkit-transform: rotateY(180deg);
+/* для поддержки moz */
+-moz-transform: rotateY(180deg);
+}
+ 
+.flip_effect_horizontal .front {
+/* общие стили */
+position: absolute; /* абсолютное позиционирование */
+width: 100%; /* на всю ширину родительского блока */
+height: 100%; /* на всю высоту родительского блока */
+background: ; /* цвет фона */
+backface-visibility: hidden; /* скрываем контент, который отвернут от пользователя */
+ 
+/* для поддержки webkit */
+-webkit-backface-visibility: hidden;
+ 
+/* для поддержки moz */
+-moz-backface-visibility: hidden;
+}
+ 
+.flip_effect_horizontal .back {
+/* общие стили */
+position: absolute; /* абсолютное позиционирование */
+width: 100%; /* на всю ширину родительского блока */
+height: 100%; /* на всю высоту родительского блока */
+background:; /* цвет фона */
+backface-visibility: hidden; /* скрываем контент, который отвернут от пользователя */
+transform: rotateY(180deg); /* отворачиваем задний блок */
+ 
+/* для поддержки webkit */
+-webkit-backface-visibility: hidden;
+-webkit-transform: rotateY(180deg);
+ 
+/* для поддержки moz */
+-moz-backface-visibility: hidden;
+-moz-transform: rotateY(180deg);
+}
+ 
+/* ВЕРТИКАЛЬНЫЙ FLIP */
+ 
+.flip_effect_vertical {
+/* общие стили */
+width:240px; /* ширина блока с flip */
+height:240px; /* высота блока с flip */
+position: relative; /* позиционируем для дочерних блоков */
+ 
+transition:1s; /* скорость поворота */
+transform-style: preserve-3d; /* стиль трансформирования 3-д */
+ 
+/* для поддержки webkit */
+-webkit-transition:1s;
+-webkit-transform-style: preserve-3d;
+-webkit-transform: rotateY(0deg);
+ 
+/* для поддержки moz */
+-moz-transition:1s;
+-moz-transform-style: preserve-3d;
+-moz-transform: rotateY(0deg);
+ 
+}
+ 
+.flip_effect_vertical:hover {
+/* общие стили */
+transform: rotateX(180deg); /* поворачиваем на 180 градусов по горизонтали */
+/* для поддержки webkit */
+-webkit-transform: rotateX(180deg);
+/* для поддержки moz */
+-moz-transform: rotateX(180deg);
+}
+ 
+.flip_effect_vertical .front {
+/* общие стили */
+position: absolute; /* абсолютное позиционирование */
+width: 100%; /* на всю ширину родительского блока */
+height: 100%; /* на всю высоту родительского блока */
+background: ; /* цвет фона */
+backface-visibility: hidden; /* скрываем контент, который отвернут от пользователя */
+
+ 
+
+/* для поддержки webkit */
+
+-webkit-backface-visibility: hidden;
+
+ 
+
+/* для поддержки moz */
+
+-moz-backface-visibility: hidden;
+
+}
+
+ 
+
+.flip_effect_vertical .back {
+
+/* общие стили */
+
+position: absolute; /* абсолютное позиционирование */
+
+width: 100%; /* на всю ширину родительского блока */
+
+height: 100%; /* на всю высоту родительского блока */
+
+background:; /* цвет фона */
+
+backface-visibility: hidden; /* скрываем контент, который отвернут от пользователя */
+
+transform: rotateX(180deg); /* отворачиваем задний блок */
+
+ 
+
+/* для поддержки webkit */
+-webkit-backface-visibility: hidden;
+-webkit-transform: rotateX(180deg);
+ 
+/* для поддержки moz */
+-moz-backface-visibility: hidden;
+-moz-transform: rotateX(180deg);
+}
